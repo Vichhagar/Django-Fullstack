@@ -49,14 +49,14 @@ export default function Form({route, method}) {
             <img
               className="mx-auto h-10 w-auto"
               src={Logo}
-              alt="Your Company"
+              alt="Company Logo"
             />
-            <h2 className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-cs-grey">
-              { method === "login" ? "Login to your account" : "Register new user" }
+            <h2 className="mt-5 text-center text-4xl font-bold leading-9 tracking-tight text-cs-grey">
+              { method === "login" ? "Login" : "Register" }
             </h2>
           </div>
   
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
