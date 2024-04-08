@@ -81,7 +81,7 @@ export default function Form({route, method}) {
                   </label>
                   <div className="text-sm">
                     <a href="#" className="font-semibold text-cs-grey hover:text-cs-grey">
-                      {/* {method === "login" && "Forgot password?"} */}
+                      {method === "login" && "Forgot password?"}
                     </a>
                   </div>
                 </div>
