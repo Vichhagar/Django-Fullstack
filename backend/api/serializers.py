@@ -13,6 +13,11 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
+    
+    def validate_email(self, value):
+        if User.objects.filter(email=value).exists():
+            raise serializers.ValidationError("This email address is already registered.")
+        return value
 
 class NoteSerializer(serializers.ModelSerializer):
     class Meta:

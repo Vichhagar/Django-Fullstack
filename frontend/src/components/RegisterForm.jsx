@@ -25,7 +25,7 @@ export default function RegisterForm({route}) {
             localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
             navigate("/");
         } catch (error) {
-            alert(error);
+            alert(error.response.data.email);
         } finally {
             setLoading(false);
         }
