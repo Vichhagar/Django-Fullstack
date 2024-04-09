@@ -25,7 +25,12 @@ export default function RegisterForm({route}) {
             localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
             navigate("/");
         } catch (error) {
-            alert(error.response.data.email);
+          // alert(Object.keys(error.response.data));
+          if(Object.keys(error.response.data) === "email") {
+            
+          } else if (Object.keys(error.response.data) === "username") {
+
+          }
         } finally {
             setLoading(false);
         }
